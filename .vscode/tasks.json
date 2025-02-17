@@ -1,0 +1,65 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"group": "build",
+			"label": "vite build",
+			"type": "npm",
+			"script": "dev:build:watch",
+			"isBackground": true,
+			"problemMatcher": [
+				{
+					"pattern": {
+						"regexp": "(Error): (.+)",
+						"severity": 1,
+						"message": 2
+					},
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": "^.*build started.*$",
+						"endsPattern": "^.*built in.*$"
+					}
+				}
+			],
+			"runOptions": {
+				"instanceLimit": 1,
+				"reevaluateOnRerun": false
+			},
+			"detail": "Bundle the extension.",
+			"icon": {
+				"id": "symbol-event",
+				"color": "terminal.ansiYellow"
+			}
+		},
+		{
+			"label": "vite serve",
+			"dependsOn": "vite build",
+			"type": "npm",
+			"script": "dev:serve",
+			"isBackground": true,
+			"problemMatcher": [
+				{
+					"pattern": {
+						"regexp": "(Error): (The following dependencies are imported but could not be resolved:)\\n{2}\\s*(\\S+)\\s*\\(imported by \\S+?\\)\\n",
+						"severity": 1,
+						"message": 2
+					},
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": "^.*restarting server.*$",
+						"endsPattern": "^.*ready.*in.*\\d+.*ms.*$"
+					}
+				}
+			],
+			"runOptions": {
+				"instanceLimit": 1,
+				"reevaluateOnRerun": false
+			},
+			"detail": "Start the dev server.",
+			"icon": {
+				"id": "server-process",
+				"color": "terminal.ansiMagenta"
+			}
+		}
+	]
+}

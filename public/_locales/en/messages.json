@@ -1,0 +1,11 @@
+{
+	"extension_name": {
+		"message": "Svelte Chromium (Chrome, Edge, Brave, etc.) Extension Template"
+	},
+	"extension_short_name": {
+		"message": "Svelte Chromium Extension Template"
+	},
+	"extension_description": {
+		"message": "A template for Chromium extensions built with Svelte."
+	}
+}
