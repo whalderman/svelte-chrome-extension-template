@@ -1,6 +1,6 @@
 # Svelte Chrome Extension Template
 
-Creating Chrome Extensions can be a bit rough to set up, hopefully this repo can help with that initial hurdle. It isn't perfect, so if you have any questions or improvements, please feel free to [start a discussion](/whalderman/svelte-chrome-extension-template/discussions) or [submit an issue](/whalderman/svelte-chrome-extension-template/issues).
+Creating Chrome Extensions can be a bit rough to set up, hopefully this repo can help with that initial hurdle. It isn't perfect, so if you have any questions or improvements, please feel free to [start a discussion](https://github.com/whalderman/svelte-chrome-extension-template/discussions) or [submit an issue](https://github.com/whalderman/svelte-chrome-extension-template/issues).
 
 ## Scripts
 
