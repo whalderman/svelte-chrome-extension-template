@@ -11,7 +11,7 @@ function get_port() {
 	if (!port) {
 		console.log("Connecting to service worker port...");
 		port = chrome.runtime.connect(get_message("@@extension_id"), {
-			name: "MyExtension",
+			name: "ahoy_little_bear",
 		});
 		port.onMessage.addListener(handle_port_msg_response);
 		port.onDisconnect.addListener(nullify_port);

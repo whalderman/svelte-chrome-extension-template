@@ -3,7 +3,7 @@ import { compare_languages } from "./analyzers/text_content";
 chrome.runtime.onConnect.addListener(handle_on_connect);
 
 function handle_on_connect(port: chrome.runtime.Port): void {
-	if (port.name !== "seodin") {
+	if (port.name !== "ahoy_little_bear") {
 		console.error("Unknown connection from port with name", port.name);
 	}
 	port.onMessage.addListener(handle_port_msg);
